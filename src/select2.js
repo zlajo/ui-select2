@@ -14,6 +14,7 @@ angular.module('ui.select2', []).value('uiSelect2Config', {}).directive('uiSelec
     require: 'ngModel',
     priority: 1,
     compile: function (tElm, tAttrs) {
+      tElm = jQuery(tElm);
       var watch,
         repeatOption,
         repeatAttr,
