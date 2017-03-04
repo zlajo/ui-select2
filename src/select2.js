@@ -32,6 +32,8 @@ angular.module('ui.select2', []).value('uiSelect2Config', {}).directive('uiSelec
       }
 
       return function (scope, elm, attrs, controller) {
+        elm = jQuery(elm);
+        
         // instance-specific options
         var opts = angular.extend({}, options, scope.$eval(attrs.uiSelect2));
 
